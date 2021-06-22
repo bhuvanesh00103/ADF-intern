@@ -7,7 +7,7 @@ def prime(n):
             return False
     else:
         return True
-n = int(input('Enter the End Number: '))
+n = int(input('Enter the End Number:'))
 for i in range(2,n+1):
     if prime(i):
         print(i)
