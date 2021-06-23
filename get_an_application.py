@@ -8,7 +8,13 @@ while True:
     d['salary'] = float(input('Enter Your Salary:- '))
     d['state'] = input('Enter Your State:- ')
     d['city'] = input('Enter Your City:- ')
-    user_details[n] = d
-    n+=1
-    if(n==4): break
+    try:
+        if (not d['name'].isalpha()) or (not str(d['age']).isdigit()) or d['gender'] not in ['male','female']:
+            raise Exception
+    except Exception:
+        print('Enter the Correct Inputs')
+    else:
+        user_details[n] = d
+        n += 1
+        if (n == 2): break
 print(user_details)

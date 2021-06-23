@@ -39,4 +39,5 @@ Q :- Program to Find ASCII Value of Character.
 Ex-7 :- get_an_application.py
 Q :- Program to get an application (name , age , gender, salary, state, city)
     1. Getting the values for the given field using input() and typecasting to respective type.
-    2. storing the data into user_details dictionary.
+    2. Done Validations.
+    3. storing the Valid data into user_details dictionary.
