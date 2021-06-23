@@ -5,10 +5,9 @@ def prime(n):
     for i in range(2,n):
         if n%i == 0:
             return False
-    else:
-        return True
+    return True
 n = int(input('Enter the End Number:'))
 for i in range(2,n+1):
     if prime(i):
         print(i)
-    time.sleep(5)
+        time.sleep(5)
