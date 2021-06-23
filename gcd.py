@@ -4,4 +4,5 @@ def gcd(a, b):
     return gcd(b, a % b)
 a, b = input('Enter the Numbers:').split()
 a, b = int(a), int(b)
-print(gcd(a, b))
+res = gcd(a, b)
+print('Gcd for',a,'and',b,'is:',res)

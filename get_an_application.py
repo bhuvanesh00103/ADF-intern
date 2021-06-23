@@ -1,0 +1,6 @@
+name = input('Enter Your Name:- ')
+age = int(input('Enter Your Age:- '))
+gender = input('Enter Your Gender(male or female):- ')
+salary = float(input('Enter Your Salary:- '))
+state = input('Enter Your State:- ')
+city = input('Enter Your City:- ')
