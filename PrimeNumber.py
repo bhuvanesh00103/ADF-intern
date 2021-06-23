@@ -7,7 +7,14 @@ def prime(n):
             return False
     return True
 n = int(input('Enter the End Number:'))
-for i in range(2,n+1):
-    if prime(i):
-        print(i)
-        time.sleep(5)
+try:
+    if n<2:
+        raise Exception
+except Exception:
+    print('End Number should greater than 1')
+else:
+    for i in range(2, n + 1):
+        if prime(i):
+            print(i)
+            if i!=n:
+                time.sleep(5)
