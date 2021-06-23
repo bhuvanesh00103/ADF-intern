@@ -32,11 +32,11 @@ Ex-5 :- dec_to_bin,oct,hex.py
 Q :- Program to Convert Decimal to Binary, Octal and Hexadecimal
     1. Converting Decimal to Binary, Octal and Hexadecimal using in-built methods bin(),oct(),hex() respectively.
 
-Ex-6 :- char_to_ascii
+Ex-6 :- char_to_ascii.py
 Q :- Program to Find ASCII Value of Character.
     1. if input value is single character then converting it ascii value using the method ord(), else throwing exception.
 
-Ex-7 :- get_an_application
+Ex-7 :- get_an_application.py
 Q :- Program to get an application (name , age , gender, salary, state, city)
     1. Getting the values for the given field using input() and typecasting to respective type.
     2. storing the data into user_details dictionary.
