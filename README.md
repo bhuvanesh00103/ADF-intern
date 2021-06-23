@@ -34,7 +34,7 @@ Q :- Program to Convert Decimal to Binary, Octal and Hexadecimal
 
 Ex-6 :- char_to_ascii.py
 Q :- Program to Find ASCII Value of Character.
-    1. if input value is single character then converting it ascii value using the method ord(), else throwing exception.
+    1. if input value is single character then converting it to ascii value using the method ord(), else throwing exception.
 
 Ex-7 :- get_an_application.py
 Q :- Program to get an application (name , age , gender, salary, state, city)
