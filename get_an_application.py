@@ -10,5 +10,5 @@ while True:
     d['city'] = input('Enter Your City:- ')
     user_details[n] = d
     n+=1
-    if(n==2): break
+    if(n==4): break
 print(user_details)
