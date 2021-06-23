@@ -15,6 +15,6 @@ except Exception:
 else:
     for i in range(2, n + 1):
         if prime(i):
-            print(i)
             if i!=n:
                 time.sleep(5)
+            print(i)
