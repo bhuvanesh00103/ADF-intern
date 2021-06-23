@@ -1,5 +1,5 @@
 # ADF-Day1
-Ex-1 :- uniquewords_from_file.py
+Ex-1 :- uniquewords_from_file.py, input.txt, output.txt.
 Q :- Program to read a file and store the unique words in a list sorted based on the length of word in a new file along with each word length appended to it.
     1. input.txt file has been opened with write mode (file.open('input.txt','w')), some text content has been wrote into the file using file.write('') and then closed the file using file.close().
     2. input.txt file has been opened with read mode (file.open('input.txt','r')), each words in the file had been stored in list.
@@ -9,11 +9,11 @@ Q :- Program to read a file and store the unique words in a list sorted based on
     6. opening output.txt with append mode and writing the word with its length into the file.
     7. closing the file output.txt.
 
-Ex-2 :- read_CSV.py
+Ex-2 :- read_CSV.py, Sample.csv
 Q :- Program to read a CSV (CSV with n number of columns) and store it in DICT of list.
     1. importing pandas library.
     2. reading the csv file using pandas.read_csv(filename) and selecting n columns using iloc[:,:n]
-    3. converting the csv file read into dict of list (dataframe.to_dict('list'))
+    3. converting the csv file into dict of list (dataframe.to_dict('list'))
 
 Ex-3 :- PrimeNumber.py
 Q :- Program to Print all Prime Numbers in an Interval of 5 seconds
