@@ -140,7 +140,7 @@ def creating_unique_file(content):
         with open('output', 'w') as f:
             f.write(content)
             f.close()
-    return 'Wrote in Existing file' if flag else 'Wrote in Existing file'
+    return 'Wrote in Existing file' if flag else 'Wrote in New file'
 
 def new_file_with_actions(filename):
     with open(filename,'r') as f:
