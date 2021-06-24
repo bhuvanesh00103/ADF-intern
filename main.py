@@ -64,7 +64,7 @@ def find_unique_words(list_of_words):
             list_of_unique_words.append(i)
     return list_of_unique_words
 
-#the below method can also used to find words
+#the below method can also used to find unique words
 def find_unique_words_using_set(list_of_words):
     return [i for i in set(list_of_words)] #But it will return unordered list
 
