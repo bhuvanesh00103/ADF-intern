@@ -1,6 +1,6 @@
 '''Importing required modules'''
 import pytest
-from main import StringManipulate
+from py_lint import StringManipulate
 
 class Test:
     '''Test Class'''

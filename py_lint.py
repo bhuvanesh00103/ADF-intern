@@ -16,11 +16,15 @@ class FileHandling():
 
     def read(self):
         """Reads the file"""
-        with open(self.filename, 'r') as file:
-            content = file.read()
-            file.close()
-            self.logger.debug(self.filename)
-            return content
+        try:
+            with open(self.filename, 'r') as file:
+                content = file.read()
+                file.close()
+                self.logger.debug(self.filename)
+                return content
+        except FileNotFoundError:
+            self.logger.error(self.filename)
+            return None
 
 
     def write(self, content):
@@ -28,7 +32,7 @@ class FileHandling():
         with open(self.out_filename, 'w') as file:
             file.write(content)
             file.close()
-            self.logger.debug('File Wrote')
+            self.logger.debug('File Wrote to', self.out_filename, 'file')
         return 'File Wrote Successfully'
 
 class StringManipulate(FileHandling):
@@ -203,18 +207,5 @@ def logger_func(name, format1, filename, level):
     logger.addHandler(filehandler)
     return logger
 
-inp = [['input', 'output']]
-StringManipulate.logger = logger_func(__name__, '%(levelname)s : %(name)s : %(asctime)s : %(message)s', 'logging.log',
-                                               logging.DEBUG)
-for i in inp:
-    obj = StringManipulate(i[0], i[1])
-    if obj.read() is not None:
-        obj.prefix_as_to()
-        obj.ending_with_ing()
-        obj.word_max_repeat()
-        obj.palindrome_words()
-        obj.find_unique_words()
-        obj.word_dict()
-        obj.new_file_with_actions()
-        obj.config_file()
-        obj.print()
+StringManipulate.logger = logger_func(__name__, '%(levelname)s : %(name)s : %(asctime)s : %(message'
+                                                ')s', 'logging.log', logging.DEBUG)
