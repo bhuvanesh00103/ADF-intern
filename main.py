@@ -109,13 +109,13 @@ class StringManipulate(FileHandling):
         list_of_words = self.file_to_list()
         self.logger.debug('List of words in file has been returned')
         dict1 = {}
-        for i in list_of_words:
-            if i in dict1:
-                dict1[i] += 1
+        for word in list_of_words:
+            if word in dict1:
+                dict1[word] += 1
             else:
-                dict1[i] = 1
-        for i in dict1:
-            if dict1[i] == 1:
+                dict1[word] = 1
+        for word in dict1:
+            if dict1[word] == 1:
                 self.list_of_unique_words.append(i)
         self.logger.debug('List of unique words were found')
         return self.list_of_unique_words
@@ -124,8 +124,8 @@ class StringManipulate(FileHandling):
         """Return counter word dict"""
         list_of_words = self.file_to_list()
         self.logger.debug('List of words in file has been returned')
-        for i in range(1, len(list_of_words) + 1):
-            self.counter_dict[i] = list_of_words[i - 1]
+        for itr in range(1, len(list_of_words) + 1):
+            self.counter_dict[itr] = list_of_words[itr - 1]
         self.logger.debug('Counter word dict found')
         return self.counter_dict
 
@@ -135,14 +135,14 @@ class StringManipulate(FileHandling):
         space = 1
         count = 0
         list_of_letters = []
-        for i in content:
+        for itr in content:
             count += 1
             if count / 3 == 1 and space == 1:
                 space = 0
-                list_of_letters.append(i.upper())
+                list_of_letters.append(itr.upper())
             else:
-                list_of_letters.append(i)
-            if i in (' ', '\\n'):
+                list_of_letters.append(itr)
+            if itr in (' ', '\\n'):
                 space = 1
                 count = 0
         return reduce(lambda x, y: x + y, list_of_letters)
@@ -152,13 +152,13 @@ class StringManipulate(FileHandling):
         print(self.no_of_prefix_at)
         space = 1
         list_of_letters = []
-        for i in content.strip():
+        for itr in content.strip():
             if space == 5:
                 space = 0
-                list_of_letters.append(i.upper())
+                list_of_letters.append(itr.upper())
             else:
-                list_of_letters.append(i)
-            if i in (' ', '\\n'):
+                list_of_letters.append(itr)
+            if itr in (' ', '\\n'):
                 space += 1
         return reduce(lambda x, y: x + y, list_of_letters)
 
@@ -204,8 +204,9 @@ def logger_func(name, format1, filename, level):
     return logger
 
 inp = [['input', 'output']]
-StringManipulate.logger = logger_func(__name__, '%(levelname)s : %(name)s : %(asctime)s : %(message)s', 'logging.log',
-                                               logging.DEBUG)
+StringManipulate.logger = logger_func(__name__, '%(levelname)s : %(name)s'
+                                                ' : %(asctime)s : %(message)s',
+                                      'logging.log',logging.DEBUG)
 for i in inp:
     obj = StringManipulate(i[0], i[1])
     if obj.read() is not None:
