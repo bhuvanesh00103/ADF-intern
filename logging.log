@@ -1,0 +1,37 @@
+DEBUG : main : 2021-06-25 15:40:11,868 : Created Object with files and attributes are initialized
+DEBUG : main : 2021-06-25 15:40:11,879 : input
+DEBUG : main : 2021-06-25 15:40:11,879 : List of words in file has been returned
+DEBUG : main : 2021-06-25 15:40:11,879 : Count of words with prefix 'At' has found
+DEBUG : main : 2021-06-25 15:40:11,882 : input
+DEBUG : main : 2021-06-25 15:40:11,883 : List of words in file has been returned
+DEBUG : main : 2021-06-25 15:40:11,883 : Count of words with prefix 'At' has found
+DEBUG : main : 2021-06-25 15:40:11,917 : input
+DEBUG : main : 2021-06-25 15:40:11,917 : List of words in file has been returned
+DEBUG : main : 2021-06-25 15:40:11,918 : Count of words ending 'ing' was found
+DEBUG : main : 2021-06-25 15:40:11,925 : input
+DEBUG : main : 2021-06-25 15:40:11,926 : List of words in file has been returned
+DEBUG : main : 2021-06-25 15:40:11,926 : Count of words ending 'ing' was found
+DEBUG : main : 2021-06-25 15:40:11,928 : input
+DEBUG : main : 2021-06-25 15:40:11,928 : List of words in file has been returned
+DEBUG : main : 2021-06-25 15:40:11,928 : Max repeated word has found
+DEBUG : main : 2021-06-25 15:40:11,930 : input
+DEBUG : main : 2021-06-25 15:40:11,931 : List of words in file has been returned
+DEBUG : main : 2021-06-25 15:40:11,931 : Max repeated word has found
+DEBUG : main : 2021-06-25 15:40:11,942 : input
+DEBUG : main : 2021-06-25 15:40:11,942 : List of words in file has been returned
+DEBUG : main : 2021-06-25 15:40:11,942 : List of palindromes were found
+DEBUG : main : 2021-06-25 15:40:11,946 : input
+DEBUG : main : 2021-06-25 15:40:11,946 : List of words in file has been returned
+DEBUG : main : 2021-06-25 15:40:11,946 : List of palindromes were found
+DEBUG : main : 2021-06-25 15:40:11,953 : input
+DEBUG : main : 2021-06-25 15:40:11,953 : List of words in file has been returned
+DEBUG : main : 2021-06-25 15:40:11,953 : List of unique words were found
+DEBUG : main : 2021-06-25 15:40:11,955 : input
+DEBUG : main : 2021-06-25 15:40:11,955 : List of words in file has been returned
+DEBUG : main : 2021-06-25 15:40:11,956 : List of unique words were found
+DEBUG : main : 2021-06-25 15:40:11,962 : input
+DEBUG : main : 2021-06-25 15:40:11,963 : List of words in file has been returned
+DEBUG : main : 2021-06-25 15:40:11,963 : Counter word dict found
+DEBUG : main : 2021-06-25 15:40:11,965 : input
+DEBUG : main : 2021-06-25 15:40:11,965 : List of words in file has been returned
+DEBUG : main : 2021-06-25 15:40:11,966 : Counter word dict found
