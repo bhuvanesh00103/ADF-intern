@@ -20,11 +20,16 @@ class FileHandling(Parent):
         self.outfilename = outfilename
 
     def read(self):
-        with open(self.filename, 'r') as file:
-            content = file.read()
-            file.close()
-            self.logger.debug(f'File read for {self.filename} file')
-            return content
+        try:
+            with open(self.filename, 'r') as file:
+                content = file.read()
+                file.close()
+                self.logger.debug(f'File read for {self.filename} file')
+                return content
+        except FileNotFoundError:
+            self.logger.error(f'FileNotFound filename:- {self.filename}')
+            return None
+
 
     def write(self, content):
         with open(self.outfilename, 'w') as file:
@@ -200,20 +205,24 @@ def logger_func (name, format, filename, level):
     logger.addHandler(filehandler)
     return logger
 
-def start():
-    StringManipulate.logger = logger_func(__name__, '%(levelname)s : %(name)s : %(message)s', 'logging.log',
+def start(inp):
+    StringManipulate.logger = logger_func(__name__, '%(levelname)s : %(name)s : %(asctime)s : %(message)s', 'logging.log',
                                                logging.DEBUG)
-    inp = [['input', 'output'], ['input1', 'output1']]
     for i in inp:
         obj = StringManipulate(i[0], i[1])
-        obj.prefix_as_to()
-        obj.ending_with_ing()
-        obj.word_max_repeat()
-        obj.palindrome_words()
-        obj.find_unique_words()
-        obj.word_dict()
-        obj.new_file_with_actions()
-        obj.config_file()
-        obj.print()
+        if obj.read() is not None:
+            obj.prefix_as_to()
+            obj.ending_with_ing()
+            obj.word_max_repeat()
+            obj.palindrome_words()
+            obj.find_unique_words()
+            obj.word_dict()
+            obj.new_file_with_actions()
+            obj.config_file()
+            obj.print()
 
-start()
+n = int(input('Enter Number of Files:- '))
+inp = []
+for i in range(n):
+    inp.append(input().split())
+start(inp)
