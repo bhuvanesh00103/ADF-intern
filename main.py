@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 import logging
 from configparser import ConfigParser
 
-# logging.basicConfig(filename='logging.log', level=logging.INFO, format='%(levelname)s : %(name)s : %(message)s')
+# logging.basicConfig(filename='logging.log', level=logging.INFO, format='%(level_name)s : %(name)s : %(message)s')
 
 class Parent(ABC):
 
@@ -15,9 +15,9 @@ class Parent(ABC):
 
 class FileHandling(Parent):
     logger = None
-    def __init__(self, filename, outfilename):
+    def __init__(self, filename, out_filename):
         self.filename = filename
-        self.outfilename = outfilename
+        self.out_filename = out_filename
 
     def read(self):
         try:
@@ -32,16 +32,16 @@ class FileHandling(Parent):
 
 
     def write(self, content):
-        with open(self.outfilename, 'w') as file:
+        with open(self.out_filename, 'w') as file:
             file.write(content)
             file.close()
-            self.logger.debug(f'File Wrote to {self.outfilename} file')
+            self.logger.debug(f'File Wrote to {self.out_filename} file')
         return 'File Wrote Successfully'
 
 class StringManipulate(FileHandling):
     config_object = ConfigParser()
-    def __init__(self, filename, outfilename):
-        super().__init__(filename, outfilename)
+    def __init__(self, filename, out_filename):
+        super().__init__(filename, out_filename)
         self.no_of_words_with_prefix_At = 0
         self.no_of_words_ending_with_ing = 0
         self.word_repeated_max = None
@@ -50,10 +50,10 @@ class StringManipulate(FileHandling):
         self.counter_dict = {}
         self.status_of_output_file = None
         self.logger.debug(f'Created Object with {self.filename} '
-                                f'and {self.outfilename} files and attributes are initialized')
+                                f'and {self.out_filename} files and attributes are initialized')
 
     def __del__(self):
-        self.logger.debug(f'Object Deleted for {self.filename} and {self.outfilename}')
+        self.logger.debug(f'Object Deleted for {self.filename} and {self.out_filename}')
 
     def file_to_list(self):
         content = self.read().replace(',', ' ').replace('.', ' ').strip().split()
@@ -70,7 +70,7 @@ class StringManipulate(FileHandling):
         self.logger.info(f'The List of Palindromes:- {self.list_of_palin}')
         self.logger.info(f'The list of Unique words:- {self.list_of_unique_words}')
         self.logger.info(f'Counter Dict:- {self.counter_dict}')
-        self.logger.info(f'Status of New file:- {self.outfilename} {self.status_of_output_file}')
+        self.logger.info(f'Status of New file:- {self.out_filename} {self.status_of_output_file}')
 
     def prefix_as_to(self):
         list_of_words = self.file_to_list()
@@ -175,7 +175,7 @@ class StringManipulate(FileHandling):
     def new_file_with_actions(self):
         content = self.read()
         content = self.splitting_words_based_vowels(content)
-        self.logger.debug(f'Splitted based on vowels')
+        self.logger.debug(f'Split based on vowels')
         content = self.capitalize_3rd_letter_of_a_word(content)
         self.logger.debug(f'Capitalized 3rd letter of every word')
         content = self.capitalize_5th_word(content)
