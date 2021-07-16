@@ -1,0 +1,37 @@
+2021-07-16 13:54:36,064 database DEBUG:Connecting to Localhost
+2021-07-16 13:54:36,081 mysql.connector.connection DEBUG:new_auth_plugin: mysql_native_password
+2021-07-16 13:54:36,082 database DEBUG:Trying create database
+2021-07-16 13:54:36,084 database DEBUG:Database Already Present
+2021-07-16 13:54:36,084 database DEBUG:Showing the Databases present
+2021-07-16 13:54:36,086 database DEBUG:Connecting to particular Database
+2021-07-16 13:54:36,088 database DEBUG:Connected to database
+2021-07-16 14:05:03,938 __main__ DEBUG:Getting Inputs
+2021-07-16 14:06:03,734 __main__ DEBUG:Get started with doing operations
+2021-07-16 14:06:03,743 database DEBUG:Connecting to Localhost
+2021-07-16 14:06:03,764 mysql.connector.connection DEBUG:new_auth_plugin: mysql_native_password
+2021-07-16 14:06:03,771 database DEBUG:Trying create database
+2021-07-16 14:06:03,772 database ERROR:Database Already Present
+2021-07-16 14:06:03,772 database DEBUG:Showing the Databases present
+2021-07-16 14:06:03,774 database DEBUG:Connecting to particular Database
+2021-07-16 14:06:03,776 database DEBUG:Connected to database
+2021-07-16 14:06:03,776 database DEBUG:Trying to create table
+2021-07-16 14:06:03,795 database ERROR:Table already Present
+2021-07-16 14:06:03,796 database DEBUG:Inserting to Table
+2021-07-16 14:06:03,822 database DEBUG:Trying to create table
+2021-07-16 14:06:03,838 database ERROR:Table already Present
+2021-07-16 14:06:03,838 database DEBUG:Fetching Rows from the table
+2021-07-16 14:06:03,854 validation DEBUG:Creating Validation Object
+2021-07-16 14:06:03,855 validation DEBUG:Checking Format of Date of Birth
+2021-07-16 14:06:03,868 validation DEBUG:Checking Age
+2021-07-16 14:06:03,869 validation DEBUG:Checking for request Interval
+2021-07-16 14:06:03,870 database DEBUG:Connecting to Localhost
+2021-07-16 14:06:03,873 mysql.connector.connection DEBUG:new_auth_plugin: mysql_native_password
+2021-07-16 14:06:03,874 database DEBUG:Connecting to particular Database
+2021-07-16 14:06:03,875 database DEBUG:Connected to database
+2021-07-16 14:06:03,875 database DEBUG:Fetching Rows from the table
+2021-07-16 14:06:03,902 database DEBUG:Closing the database connection
+2021-07-16 14:06:03,902 validation DEBUG:Checking Nationality
+2021-07-16 14:06:03,903 validation DEBUG:Checking State
+2021-07-16 14:06:03,903 validation DEBUG:Salary Checker
+2021-07-16 14:06:03,903 database DEBUG:Inserting to Table
+2021-07-16 14:06:03,904 database DEBUG:Closing the database connection
